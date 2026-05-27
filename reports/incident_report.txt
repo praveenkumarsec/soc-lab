@@ -1,0 +1,55 @@
+============================================================
+SOC LAB - INCIDENT REPORT
+Project: Cloud SOC with Azure Logs
+Generated: 2026-05-26 06:55:52.297063
+Analyst: SOC-Lab
+============================================================
+
+--- azure-attack-1.json ---
+Time:      2026-05-23T11:12:45.152Z
+Caller:    compromised-user@onmicrosoft.com
+Source IP: 203.0.113.19
+Operation: Microsoft.Network/networkSecurityGroups/write
+THREAT: [CRITICAL] Compromised account T1078
+THREAT: [HIGH] NSG Firewall modified T1562
+
+--- azure-attack-2.json ---
+Time:      2026-05-23T11:25:00.000Z
+Caller:    attacker@external.com
+Source IP: 203.0.113.19
+Operation: Microsoft.Authorization/signin
+THREAT: [MEDIUM] Failed login T1110
+
+--- azure-attack-3.json ---
+Time:      2026-05-23T11:45:00.000Z
+Caller:    compromised-user@onmicrosoft.com
+Source IP: 203.0.113.19
+Operation: Microsoft.Authorization/roleAssignments/write
+THREAT: [CRITICAL] Compromised account T1078
+THREAT: [CRITICAL] Privilege escalation T1548
+
+--- azure-attack-4.json ---
+Time:      2026-05-23T12:00:00.000Z
+Caller:    compromised-user@onmicrosoft.com
+Source IP: 203.0.113.19
+Operation: Microsoft.Storage/storageAccounts/blobServices/read
+THREAT: [CRITICAL] Compromised account T1078
+THREAT: [HIGH] Data exfiltration T1567
+
+--- azure-attack-5.json ---
+Time:      2026-05-23T12:30:00.000Z
+Caller:    compromised-user@onmicrosoft.com
+Source IP: 203.0.113.19
+Operation: Microsoft.Compute/virtualMachines/write
+THREAT: [CRITICAL] Compromised account T1078
+THREAT: [CRITICAL] Backdoor VM T1578
+
+============================================================
+FINAL SUMMARY
+Total Alerts:  9
+CRITICAL:      6
+HIGH:          2
+MEDIUM:        1
+Attacker IP:   203.0.113.19  STATUS: BLOCKED
+Response:      Auto-blocked by SOC system
+============================================================

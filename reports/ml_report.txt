@@ -1,0 +1,8 @@
+=======================================================
+SOC ML ANOMALY DETECTION REPORT
+Generated: 2026-05-26 11:43:06.451453
+Model: Isolation Forest
+Total records:  55
+Normal:         46
+Anomalies:      9
+Detection rate: 16.4%
